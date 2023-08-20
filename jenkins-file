@@ -12,10 +12,6 @@ pipeline {
              build quietPeriod: 5, job: 'Git pull'
             }
         }
-        stage('Git Push') {
-            steps {
-             build quietPeriod: 5, job: 'Git push'
-            }
-        }
+        
     }
 }
