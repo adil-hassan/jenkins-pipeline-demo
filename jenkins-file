@@ -2,14 +2,14 @@ pipeline {
     agent any
 
     stages {
-        stage('git pull') {
-            steps {
-             build quietPeriod: 5, job: 'Git pull'
-            }
-        }
         stage('git status') {
             steps {
              build quietPeriod: 5, job: 'Git status'
+            }
+        }
+        stage('git push') {
+            steps {
+             build quietPeriod: 5, job: 'Git push'
             }
         }
         
